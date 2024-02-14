@@ -1,2 +1,2 @@
-# adyen-salesforce-headless
-Adyen Payments Headless Integration with Salesforce PWA demo
+# Adyen Saleforce PWA Headless Integration demo
+Adyen Payments Headless Integration with Salesforce Composable Storefront for B2C Commerce demo.
