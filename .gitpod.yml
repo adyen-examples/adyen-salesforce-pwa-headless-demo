@@ -9,12 +9,12 @@ tasks:
         fi
 
 
-- name: Main Command  
-  init: npm install
-  command: npm run start
-  env:
-      RefArch_ADYEN_ENVIRONMENT: TEST
-      RefArch_SYSTEM_INTEGRATOR_NAME: AdyenDevRelGitpod
+    - name: Main Command  
+      init: npm install
+      command: npm run start
+      env:
+          RefArch_ADYEN_ENVIRONMENT: TEST
+          RefArch_SYSTEM_INTEGRATOR_NAME: AdyenDevRelGitpod
 
 
 ports:
