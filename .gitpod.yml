@@ -1,9 +1,24 @@
 tasks:
-  - init: npm install
-    command: npm run start
+- name: Environment check
+  before: |
+    echo "Checking if required environment variables are set ..."
+
+    if [[ -z ${RefArch_ADYEN_API_KEY+x} ]] || [[ -z ${RefArch_ADYEN_MERCHANT_ACCOUNT+x} ]] || [[ -z ${RefArch_ADYEN_CLIENT_KEY+x} ]] || [[ -z ${COMMERCE_API_CLIENT_ID+x} ]] || [[ -z ${COMMERCE_API_ORG_ID+x} ]] || [[ -z ${COMMERCE_API_SHORT_CODE+x} ]] || [[ -z ${COMMERCE_API_SITE_ID+x} ]] || [[ -z ${COMMERCE_API_DEFAULT_SITE+x} ]] || [[ -z ${SCAPI_URL+x} ]] || [[ -z ${OCAPI_URL+x} ]] || [[ -z ${ENVIRONMENT_ID+x} ]] || [[ -z ${PROJECT_ID+x} ]]; then
+      echo "Expected environment variables not found. Please set all required environment variables in your Gitpod environment and rerun session https://gitpod.io/variables. Check the project README for details."
+      exit 1
+    fi
+
+
+- name: Main Command  
+  init: npm install
+  command: npm run start
+  env:
+      RefArch_ADYEN_ENVIRONMENT: TEST
+      RefArch_SYSTEM_INTEGRATOR_NAME: AdyenDevRelGitpod
 
 
 ports:
   - port: 3000
-    onOpen: open-preview
     visibility: public
+    onOpen: open-browser
+    
