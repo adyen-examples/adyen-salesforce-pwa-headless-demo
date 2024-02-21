@@ -1,6 +1,6 @@
 tasks:
-  - name: Check Environment Variables
-    before: |
+  - name: Gitpod tasks
+    command: |
       echo "Checking if required environment variables are set ..."
       
       required_vars=(RefArch_ADYEN_API_KEY RefArch_ADYEN_MERCHANT_ACCOUNT RefArch_ADYEN_CLIENT_KEY COMMERCE_API_CLIENT_ID COMMERCE_API_ORG_ID COMMERCE_API_SHORT_CODE COMMERCE_API_SITE_ID COMMERCE_API_DEFAULT_SITE SCAPI_URL OCAPI_URL ENVIRONMENT_ID PROJECT_ID)
@@ -11,9 +11,11 @@ tasks:
           exit 1
         fi
       done
-  - name: Main Command
-    init: npm install
-    command: npm run start
+      
+      npm install
+
+      npm run start
+    
     env:
       RefArch_ADYEN_ENVIRONMENT: TEST
       RefArch_SYSTEM_INTEGRATOR_NAME: AdyenDevRelGitpod
