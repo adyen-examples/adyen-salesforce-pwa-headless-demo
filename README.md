@@ -76,18 +76,18 @@ git clone https://github.com/adyen-examples/adyen-salesforce-pwa-headless-demo.g
 ### 2. Set the environment variables
 
 1. Create a `./.env` file with your environment variables. 
-- Copy the `/.env.example` file and rename the file to .env.
+- Copy the `./.env.example` file and rename the file to .env.
 
 2. Set the variables in the .env file. Replace `YOUR_SITE_ID` in the variables with your Salesforce Site ID, this value is identical to the value you have for `COMMERCE_API_SITE_ID` f.e. `RefArch_ADYEN_API_KEY` where `RefArch` is your Site ID.
 
-## 3. Configure allowed origins (CORS)
+### 3. Configure allowed origins (CORS)
 
 It is required to specify the domain or URL of the web applications that will make requests to Adyen.
 
 In the Customer Area add `http://localhost:3000` in the list of Allowed Origins associated with the Client Key.
 
 
-## 4. Run the application
+### 4. Run the application
 
 ```
 npm install
