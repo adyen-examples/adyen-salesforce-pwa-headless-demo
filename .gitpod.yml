@@ -1,0 +1,12 @@
+tasks:
+  - name: Gitpod tasks
+    command: npm install && npm run start
+    
+    env:
+      RefArch_ADYEN_ENVIRONMENT: TEST
+      RefArch_SYSTEM_INTEGRATOR_NAME: AdyenDevRelGitpod
+
+ports:
+  - port: 3000
+    visibility: public
+    onOpen: open-browser
