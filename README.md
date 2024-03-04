@@ -55,7 +55,7 @@ Recommended additional variables;
  
 4. Click the button below
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adyen-examples/adyen-salesforce-pwa-headless-demo/tree/develop)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adyen-examples/adyen-salesforce-pwa-headless-demo/tree/main)
 
 
 ## Run demo locally
