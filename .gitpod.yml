@@ -1,7 +1,7 @@
 tasks:
   - name: Gitpod tasks
-    command: npm install && npm run start
-    
+    command: ./start.sh
+       
     env:
       RefArch_ADYEN_ENVIRONMENT: TEST
       RefArch_SYSTEM_INTEGRATOR_NAME: AdyenDevRelGitpod
