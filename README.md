@@ -94,6 +94,6 @@ npm install
 npm run start
 ```
 
-Visit [http://localhost:8080/](http://localhost:3000/) to view storefront and make a test payment.
+Visit [http://localhost:3000/](http://localhost:3000/) to view storefront and make a test payment.
 
 Try out the different payment methods with our [test card numbers](https://docs.adyen.com/development-resources/test-cards/test-card-numbers) and other payment method details.
