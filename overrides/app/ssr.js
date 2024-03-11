@@ -5,14 +5,14 @@
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
 
-import path from 'path'
-import {getRuntime} from '@salesforce/pwa-kit-runtime/ssr/server/express'
-import {isRemote} from '@salesforce/pwa-kit-runtime/utils/ssr-server'
-import {getConfig} from '@salesforce/pwa-kit-runtime/utils/ssr-config'
-import helmet from 'helmet'
+import { getRuntime } from '@salesforce/pwa-kit-runtime/ssr/server/express'
+import { getConfig } from '@salesforce/pwa-kit-runtime/utils/ssr-config'
+import { isRemote } from '@salesforce/pwa-kit-runtime/utils/ssr-server'
 import bodyParser from 'body-parser'
+import helmet from 'helmet'
+import path from 'path'
 /* -----------------Adyen Begin ------------------------ */
-import {registerAdyenEndpoints} from '@adyen/adyen-salesforce-pwa/dist/ssr/index.js'
+import { registerAdyenEndpoints } from '@adyen/adyen-salesforce-pwa/dist/ssr/index.js'
 /* -----------------Adyen End ------------------------ */
 const options = {
     // The build directory (an absolute path)
@@ -77,7 +77,7 @@ const {handler} = runtime.createHandler(options, (app) => {
                         '*.amazon.com',
                         'https://www.sandbox.paypal.com/xoplatform/logger/api/logger?disableSetCookie=true'
                     ],
-                    'frame-src': ["'self'", '*.adyen.com', '*.paypal.com'],
+                    'frame-src': ["'self'", '*.adyen.com', '*.paypal.com', '*.google.com'],
                     /* -----------------Adyen End ------------------------ */
                     // Do not upgrade insecure requests for local development
                     'upgrade-insecure-requests': isRemote() ? [] : null
