@@ -5,14 +5,14 @@
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
 
-import { getRuntime } from '@salesforce/pwa-kit-runtime/ssr/server/express'
-import { getConfig } from '@salesforce/pwa-kit-runtime/utils/ssr-config'
-import { isRemote } from '@salesforce/pwa-kit-runtime/utils/ssr-server'
-import bodyParser from 'body-parser'
-import helmet from 'helmet'
 import path from 'path'
+import {getRuntime} from '@salesforce/pwa-kit-runtime/ssr/server/express'
+import {isRemote} from '@salesforce/pwa-kit-runtime/utils/ssr-server'
+import {getConfig} from '@salesforce/pwa-kit-runtime/utils/ssr-config'
+import helmet from 'helmet'
+import bodyParser from 'body-parser'
 /* -----------------Adyen Begin ------------------------ */
-import { registerAdyenEndpoints } from '@adyen/adyen-salesforce-pwa/dist/ssr/index.js'
+import {registerAdyenEndpoints} from '@adyen/adyen-salesforce-pwa/dist/ssr/index.js'
 /* -----------------Adyen End ------------------------ */
 const options = {
     // The build directory (an absolute path)
@@ -73,11 +73,18 @@ const {handler} = runtime.createHandler(options, (app) => {
                     'connect-src': [
                         "'self'",
                         'api.cquotient.com',
+                        'https://api.lab.amplitude.com/sdk/vardata',
                         '*.adyen.com',
                         '*.amazon.com',
                         'https://www.sandbox.paypal.com/xoplatform/logger/api/logger?disableSetCookie=true'
                     ],
-                    'frame-src': ["'self'", '*.adyen.com', '*.paypal.com', '*.google.com'],
+                    'frame-src': [
+                        "'self'",
+                        '*.adyen.com',
+                        '*.paypal.com',
+                        '*.google.com',
+                        'https://sandbox.kit.cash.app'
+                    ],
                     /* -----------------Adyen End ------------------------ */
                     // Do not upgrade insecure requests for local development
                     'upgrade-insecure-requests': isRemote() ? [] : null
