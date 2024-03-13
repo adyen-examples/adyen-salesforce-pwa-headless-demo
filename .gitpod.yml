@@ -1,6 +1,6 @@
 tasks:
   - name: Gitpod start script
-    command: ./gitpod_start.sh
+    command: ./.gitpod_start.sh
     
     env:
       RefArch_ADYEN_ENVIRONMENT: TEST
