@@ -11,7 +11,7 @@ Before you start this demo, make sure that:
 3. You have set up your sites and [SLAS](https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-shopper-apis.html) for Composable Storefront.
 4. You have set up and know where to find [configuration values for your local environment](https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/setting-up-your-local-environment.html#configuration-values).
 
-You can run this demo in 2 ways: using an Open Source online workspace ([Gitpod](https://github.com/adyen-examples/adyen-salesforce-pwa-headless-demo/tree/main?tab=readme-ov-file#quick-online-demo-with-gitpod)) or on your [local machine](https://github.com/adyen-examples/adyen-salesforce-pwa-headless-demo/tree/main?tab=readme-ov-file#run-demo-locally).
+You can run this demo in 2 ways: using an Open Source online workspace ([Gitpod](https://github.com/adyen-examples/adyen-salesforce-pwa-headless-demo/tree/main?tab=readme-ov-file#quick-online-demo-with-gitpod)) or on your [local machine](https://github.com/adyen-examples/adyen-salesforce-pwa-headless-demo/tree/main?tab=readme-ov-file#launch-demo-on-local).
 
 > :warning: **Important Notice:** This application is not intended for production use. While the application demonstrates key functionalities, it has not been developed with the robustness, security, compatibility, and scalability necessary for production environments.
 
