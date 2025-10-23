@@ -11,67 +11,6 @@ Before you start this demo, make sure that:
 3. You have set up your sites and [SLAS](https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-shopper-apis.html) for Composable Storefront.
 4. You have set up and know where to find [configuration values for your local environment](https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/setting-up-your-local-environment.html#configuration-values).
 
-You can run this demo in 2 ways: using an Open Source online workspace ([Gitpod](https://github.com/adyen-examples/adyen-salesforce-pwa-headless-demo/tree/main?tab=readme-ov-file#quick-online-demo-with-gitpod)) or on your [local machine](https://github.com/adyen-examples/adyen-salesforce-pwa-headless-demo/tree/main?tab=readme-ov-file#launch-demo-on-local).
-
-> :warning: **Important Notice:** This application is not intended for production use. While the application demonstrates key functionalities, it has not been developed with the robustness, security, compatibility, and scalability necessary for production environments.
-
-## Quick online demo with [Gitpod](https://gitpod.io/)
-
-### 1. Set the environment variables in Gitpod
-
-1. Get your Test API credentials ready. Don't have an Adyen API Key? Log in to your [Customer Area](https://ca-test.adyen.com/), Go to **Developers** > **API credentials**, and create a set of API Credendials for your integration.
-2. Get all the required environment variables below, append the value of `COMMERCE_API_SITE_ID` with all Adyen environment variable names. For example, if your `COMMERCE_API_SITE_ID` is `RefArch`, your `ADYEN_API_KEY` should be `RefArch_ADYEN_API_KEY`. Go to [gitpod account variables](https://gitpod.io/variables) and add all required variables. This is a one-time setup.
-
-```shell
-    RefArch_ADYEN_API_KEY="YOUR_ADYEN_API_KEY"
-    RefArch_ADYEN_MERCHANT_ACCOUNT="YOUR_ADYEN_MERCHANT_ACCOUNT"
-    RefArch_ADYEN_CLIENT_KEY="YOUR_ADYEN_CLIENT_KEY"
-
-    COMMERCE_API_CLIENT_ID="YOUR_MRT_COMMERCE_API_CLIENT_ID"
-    COMMERCE_API_ORG_ID="YOUR_MRT_COMMERCE_API_ORG_ID"
-    COMMERCE_API_SHORT_CODE="YOUR_MRT_COMMERCE_API_SHORT_CODE"
-    COMMERCE_API_SITE_ID="RefArch"
-    COMMERCE_API_DEFAULT_SITE="RefArch"
-    SCAPI_URL="*.api.commercecloud.salesforce.com"
-    OCAPI_URL="*-123.sandbox.xx00.dx.commercecloud.salesforce.com"
-    ENVIRONMENT_ID="YOUR_MRT_ENVIRONMENT_ID"
-    PROJECT_ID="adyen-salesforce-pwa-demo"
-```
-
-3. To setup webhooks, add the following variables to Gitpod. (Set scope: `adyen-examples/*`)
-
-```shell
-    RefArch_ADYEN_WEBHOOK_USER="YOUR_ADYEN_WEBHOOK_USERNAME"
-    RefArch_ADYEN_WEBHOOK_PASSWORD="YOUR_ADYEN_WEBHOOK_PASSWORD"
-    RefArch_ADYEN_HMAC_KEY="YOUR_ADYEN_HMAC_KEY"
-```
-
-4.  Optional additional variables;
-
-```shell
-    COMMERCE_API_CLIENT_ID_PRIVATE="YOUR_COMMERCE_API_CLIENT_ID"
-    COMMERCE_API_CLIENT_SECRET="YOUR_COMMERCE_API_CLIENT_SECRET"
-    SFCC_REALM_ID="YOUR_SFCC_REALM_ID"
-    SFCC_INSTANCE_ID="YOUR_SFCC_INSTANCE_ID"
-    SFCC_OAUTH_SCOPES="sfcc.orders sfcc.orders.rw"
-```
-
-### 2. Configure allowed origins (CORS) for Gitpod
-
-1. In the Customer Area, add `https://*.gitpod.io` to the list of Allowed Origins associated with the Client Key to make sure the UI can load the Drop-in and Components
-2. In the redirect field of [SLAS UI Admin](https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-shopper-apis.html#create-a-slas-client) Client settings, append a `|` character followed by `https://*.gitpod.io/callback`
-
-```shell
-    http://127.0.0.1:3000/callback|http://localhost:3000/callback|https://*.mobify-storefront.com/callback|https://*.gitpod.io/callback
-```
-
-### 3. Launch the demo on Gitpod
-
-1. Click the button below
-2. Click **Continue** to open with the default Gitpod Workspace.
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/adyen-examples/adyen-salesforce-pwa-headless-demo/tree/main)
-
 ## Run demo on local
 
 You can run this demo on your local machine.
